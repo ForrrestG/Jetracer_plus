@@ -1,10 +1,10 @@
 #4-21-23
 #Importing required libraies
-from jetracer.nvidia_racecar import NvidaRacecar
+from jetracer.nividia_racecar import NvidaRacecar
 
 import argparse 
 #createing the objects, for control over the car robot and parser
-car = NvidiaRacecar()
+car = NividiaRacecar()
 
 parser = argparce.ArgumentParser()
 #adding a way to input into the program "--value" flag
