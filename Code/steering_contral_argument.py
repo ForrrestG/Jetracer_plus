@@ -14,4 +14,4 @@ args = parser.parse_args()
 #we're commanding the car to change steering
 car.steering = args.value
 
-print=("the command servor value is:  ", args.value)
+print = ("the command servor value is:  ", args.value)
