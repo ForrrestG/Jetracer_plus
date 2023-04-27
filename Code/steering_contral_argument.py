@@ -6,7 +6,7 @@ import argparse
 #createing the objects, for control over the car robot and parser
 car = NvidiaRacecar()
 
-parser = argparce.ArgumentParser()
+parser = argparse.ArgumentParser()
 #adding a way to input into the program "--value" flag
 parser.add_argumen('--value', type=float, required=True)
 #we are parcing the input of the usser
