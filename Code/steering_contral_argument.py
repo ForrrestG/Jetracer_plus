@@ -8,7 +8,7 @@ car = NvidiaRacecar()
 
 parser = argparse.ArgumentParser()
 #adding a way to input into the program "--value" flag
-parser.add_argumen('--value', type=float, required=True)
+parser.add_argument('--value', type=float, required=True)
 #we are parcing the input of the usser
 args = parser.parse_args()
 #we're commanding the car to change steering
