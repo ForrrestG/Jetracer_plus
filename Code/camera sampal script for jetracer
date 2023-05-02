@@ -1,0 +1,35 @@
+#pathfinders_camera_example.py
+#Author: George Gorospe, george.gorospe@nmaia.net
+
+#about:
+#learning how to use code to contral the jetracer
+#this scrip shows how to collect a single photograph using the jetcam libary
+
+#import required libraies 
+import os, time
+from uuid import uuidl
+from jetcam.csi_camera import CSICamera
+from jetcam.utils import bgr8_jpeg
+
+camera = CSICamera(width=224, hight=224)
+
+time.sleep(5)
+
+#collect an image and modify it so that it may be saved as a .jpeg file
+#note: when usisng the CISCamera modula, colleced images are of type of a numpy array
+image = camera.read()
+image = bgr8_to_jpeg(image)
+
+
+uuid = '%s' % (uuidi())
+directory = os.getcwd();
+image_path = os.path.join(directory, 'sample_image_' + uuid + '. jpg')
+
+#saving the image to gile
+with open(image_path, 'wb') as f:
+    f.write(image)
+
+print('New File Creaded: \n')
+print(image_path)
+
+camera.running = false
