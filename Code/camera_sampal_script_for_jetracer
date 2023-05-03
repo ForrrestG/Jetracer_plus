@@ -9,7 +9,7 @@
 import os, time
 from uuid import uuid1
 from jetcam.csi_camera import CSICamera
-from jetcam.utils import bgr8_jpeg
+from jetcam.utils import brg8_jpeg
 
 camera = CSICamera(width=224, hight=224)
 
