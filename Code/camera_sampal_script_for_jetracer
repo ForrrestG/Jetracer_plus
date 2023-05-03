@@ -7,7 +7,7 @@
 
 #import required libraies 
 import os, time
-from uuid import uuidl
+from uuid import uuid1
 from jetcam.csi_camera import CSICamera
 from jetcam.utils import bgr8_jpeg
 
@@ -21,9 +21,9 @@ image = camera.read()
 image = bgr8_to_jpeg(image)
 
 
-uuid = '%s' % (uuidi())
+uuid = '%s' % (uuid1())
 directory = os.getcwd();
-image_path = os.path.join(directory, 'sample_image_' + uuid + '. jpg')
+image_path = os.path.join(directory, 'sample_image_' + uuid + '. jpeg')
 
 #saving the image to gile
 with open(image_path, 'wb') as f:
@@ -32,4 +32,4 @@ with open(image_path, 'wb') as f:
 print('New File Creaded: \n')
 print(image_path)
 
-camera.running = false
+camera.running = False
