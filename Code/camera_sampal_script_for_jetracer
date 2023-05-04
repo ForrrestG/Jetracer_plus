@@ -23,9 +23,9 @@ image = bgr8_to_jpeg(image)
 
 uuid = '%s' % (uuid1())
 directory = os.getcwd();
-image_path = os.path.join(directory, 'sample_image_' + uuid + '. jpeg')
+image_path = os.path.join(directory, 'sample_image_' + uuid + '. jpg')
 
-#saving the image to gile
+#saving the image to file
 with open(image_path, 'wb') as f:
     f.write(image)
 
